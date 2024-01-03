@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}Update Animal{% endblock %}
+{% block content %}
+  <h2>Update Animal</h2>
+  <form method="POST" action="{{ url_for('update_animal', animal_id=animal[0]) }}">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="{{ animal[1] }}" required>
+    <br>
+    <label for="type">Type:</label>
+    <input type="text" name="type" value="{{ animal[2] }}" required>
+    <br>
+    <label for="age">Age:</label>
+    <input type="number" name="age" value="{{ animal[3] }}" required>
+    <br>
+    <label for="Picture">Picture:</label>
+    <input type="text" name="Picture" value="{{ animal[4] }}" required>
+    <br>
+    <input type="submit" value="Update Animal">
+  </form>
+  <p><a href="{{ url_for('home') }}">Back to Home</a></p>
+{% endblock %}

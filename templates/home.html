@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+  <h2>Welcome, {% if 'username' in session %}{{ session['username'] }}{% else %}Guest{% endif %}!</h2>
+  <p><a href="{{ url_for('add_animal') }}">Add Animal</a></p>
+  <p><a href="{{ url_for('animals_list') }}">View Animals List</a></p>
+{% endblock %}
