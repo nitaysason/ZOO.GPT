@@ -25,7 +25,8 @@
                 
                
                 <td>
-                    <a href="{{ url_for('update_animal', animal_id=animal[0]) }}">Update</a>
+                    <a href="{{ url_for('update_animal', animal_id=animal[0]) }}">
+                    <input type="submit" value="Update"></a>
                     <form method="POST" action="{{ url_for('delete_animal', animal_id=animal[0]) }}" onsubmit="return confirm('Are you sure you want to delete this animal?');">
                         <input type="submit" value="Delete">
                     </form>
