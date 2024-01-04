@@ -25,10 +25,10 @@
                 
                
                 <td>
-                    <a href="{{ url_for('update_animal', animal_id=animal[0]) }}">
-                    <input type="submit" value="Update"></a>
+                    <a href="{{ url_for('update_animal', animal_id=animal[0]) }}" >
+                    <input type="submit" value="Update" style="color: black;width: 80px;"></a>
                     <form method="POST" action="{{ url_for('delete_animal', animal_id=animal[0]) }}" onsubmit="return confirm('Are you sure you want to delete this animal?');">
-                        <input type="submit" value="Delete">
+                        <input type="submit" value="Delete" style="color: black;width: 80px;">
                     </form>
                 </td>
             </tr>
